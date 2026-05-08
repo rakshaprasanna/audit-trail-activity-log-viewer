@@ -20,11 +20,6 @@ public class AuditLogService {
     }
 
     public AuditLog saveLog(AuditLog log) {
-
-        if (log.getUsername() == null || log.getUsername().isEmpty()) {
-            throw new RuntimeException("Username is required");
-        }
-
         return repository.save(log);
     }
 }
